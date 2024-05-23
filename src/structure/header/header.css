@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ypn-padding-margin-l);
+  background-color: var(--ypn-color-white);
+}
+
+.labelNombre {
+  display: flex;
+  align-items: center;
+  font-size: var(--ypn-font-size-xl);
+  font-family: var(--ypn-font-family-base);
+  font-weight: var(--ypn-font-weight-extrabold);
+}
+
+header .labelPerfil {
+  font-size: var(--ypn-font-size-m);
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--ypn-gap-xs);
+}
+
+header nav a {
+  color: var(--ypn-color-text);
+  text-decoration: none;
+  margin-left: var(--ypn-padding-margin-l);
+  font-size: var(--ypn-font-size-s);
+  cursor: pointer;
+}
+
+header nav a:hover {
+  color: var(--ypn-color-primary);
+}
+
+header nav a.active {
+  color: var(--ypn-color-primary);
+}
+
+header > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--ypn-color-text);
+}

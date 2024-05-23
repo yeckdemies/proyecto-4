@@ -1,0 +1,72 @@
+.pagePrincipal {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+
+.left {
+  left: 0;
+  background-color: var(--ypn-color-dark);
+  width: 40%;
+}
+
+.right {
+  right: 0;
+  width: 60%;
+  background-color: var(--ypn-color-white);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--ypn-color-white);
+  box-shadow: var(--ypn-shadow-xxl);
+  width: 80vh;
+}
+
+.card {
+  background-color: var(--ypn-color-accent);
+  width: 40vh;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  width: 40vh;
+  padding: var(--ypn-padding-margin-s) var(--ypn-padding-margin-l);
+}
+
+.contentButtons {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  gap: var(--ypn-gap-s);
+  padding-top: var(--ypn-padding-margin-l);
+}
+
+.contentP {
+  padding: var(--ypn-padding-margin-l) 0;
+}
+
+p {
+  color: var(--ypn-color-text-light);
+  font-size: var(--ypn-font-size-m);
+  font-weight: var(--ypn-font-weight-extraThin);
+  text-align: justify;
+}
+
+.presentation > h2 {
+  font-size: var(--ypn-font-size-xxxl);
+}

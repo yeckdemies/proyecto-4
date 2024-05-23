@@ -1,29 +1,85 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Paleta de Colores */
+  --ypn-color-primary: #0056b3;
+  --ypn-color-secondary: #003f7f;
+  --ypn-color-dark: #002d59;
+  --ypn-color-accent: #ececfafe;
+  --ypn-color-white: #ffffff;
+  --ypn-color-text: #002244;
+  --ypn-color-text-light: #666666;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Tipografía */
+  --ypn-font-family-base: 'Arial', sans-serif;
+  --ypn-font-size-xs: 0.5rem;
+  --ypn-font-size-s: 0.8rem;
+  --ypn-font-size-m: 1rem;
+  --ypn-font-size-l: 1.5rem;
+  --ypn-font-size-xl: 2rem;
+  --ypn-font-size-xxl: 2.5rem;
+  --ypn-font-size-xxxl: 4rem;
+  --ypn-font-weight-extraThin: 50;
+  --ypn-font-weight-thin: 100;
+  --ypn-font-weight-light: 300;
+  --ypn-font-weight-regular: 400;
+  --ypn-font-weight-medium: 500;
+  --ypn-font-weight-semibold: 600;
+  --ypn-font-weight-bold: 700;
+  --ypn-font-weight-extrabold: 800;
+  --ypn-font-weight-black: 900;
+  --ypn-letter-spacing-s: 2px;
+  --ypn-letter-spacing-m: 5px;
+  --ypn-letter-spacing-l: 8px;
+  --ypn-letter-spacing-xl: 10px;
+  --ypn-letter-spacing-xxl: 12px;
+  /* Espaciado */
+  --ypn-spacing-s: 4px;
+  --ypn-spacing-m: 8px;
+  --ypn-spacing-l: 16px;
+  --ypn-spacing-xl: 24px;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Padding - Margin */
+  --ypn-padding-margin-s: 0.5rem;
+  --ypn-padding-margin-m: 1rem;
+  --ypn-padding-margin-l: 2rem;
+  --ypn-padding-margin-xl: 3rem;
+  --ypn-padding-margin-xxl: 4rem;
+
+  /* Bordes y Radio */
+  --ypn-border-width: 1px;
+  --ypn-border-radius-s: 15px;
+  --ypn-border-radius-m: 20px;
+  --ypn-border-radius-l: 30px;
+  --ypn-border-radius-xl: 50px;
+
+  /* Separación */
+  --ypn-gap-s: 1rem;
+  --ypn-gap-m: 2rem;
+  --ypn-gap-l: 3rem;
+  --ypn-gap-xl: 4rem;
+  --ypn-gap-xxl: 5rem;
+
+  /* Sombra */
+  --ypn-shadow-s: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --ypn-shadow-m: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ypn-shadow-l: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --ypn-shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --ypn-shadow-xxl: 0px 30px 30px rgba(0, 0, 0, 0.2);
+
+  /* Opacidad */
+  --ypn-opacity-s: 0.2;
+  --ypn-opacity-m: 0.5;
+  --ypn-opacity-l: 0.8;
+  --ypn-opacity-xl: 1;
+
+  /* Transiciones */
+  --ypn-transition-fast: 0.2s;
+  --ypn-transition-medium: 0.4s;
+  --ypn-transition-slow: 0.6s;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0;
+  font-family: var(--ypn-font-family-base);
+  overflow: hidden;
 }
