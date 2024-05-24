@@ -41,7 +41,7 @@
   border: 0;
   width: 50px;
   height: 3px;
-  background: var(--ypn-color-dark);
+  background: var(--ypn-color-primary);
   margin: var(--ypn-padding-margin-xxl);
 }
 

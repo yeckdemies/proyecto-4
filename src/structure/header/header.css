@@ -42,7 +42,7 @@ header nav a.active {
 }
 
 header > a {
-  cursor: pointer;
   text-decoration: none;
   color: var(--ypn-color-text);
+  cursor: pointer;
 }

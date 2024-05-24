@@ -4,12 +4,11 @@ const buildHeader = () => {
   const header = document.createElement('header');
 
   const inicio = document.createElement('a');
-  inicio.href = '#';
   inicio.id = 'inicio';
 
   const labelNombre = document.createElement('label');
   labelNombre.className = 'labelNombre';
-  labelNombre.innerText = 'Yolanda Pérez';
+  labelNombre.innerHTML = `<span style="color: var(--ypn-color-primary);">■</span>Yolanda Pérez`;
 
   const labelPerfil = document.createElement('label');
   labelPerfil.className = 'labelPerfil';
@@ -32,7 +31,7 @@ const buildHeader = () => {
   menu.appendChild(linkCurriculum);
 
   const linkPortfolio = document.createElement('a');
-  linkPortfolio.innerText = 'PORTFOLIO';
+  linkPortfolio.innerText = 'PORTAFOLIO';
   linkPortfolio.id = 'portafolio';
   menu.appendChild(linkPortfolio);
 
