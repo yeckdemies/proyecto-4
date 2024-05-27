@@ -31,6 +31,7 @@
   --ypn-letter-spacing-l: 8px;
   --ypn-letter-spacing-xl: 10px;
   --ypn-letter-spacing-xxl: 12px;
+
   /* Espaciado */
   --ypn-spacing-s: 4px;
   --ypn-spacing-m: 8px;
@@ -77,11 +78,14 @@
   --ypn-transition-slow: 0.6s;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--ypn-font-family-base);
-  overflow: hidden;
 }
 
 .fade-enter {

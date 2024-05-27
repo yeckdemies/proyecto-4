@@ -1,6 +1,6 @@
 .pagePrincipal {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 119px);
   overflow: hidden;
   display: flex;
   justify-content: center;

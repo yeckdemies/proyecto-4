@@ -8,7 +8,7 @@ const buildHeader = () => {
 
   const labelNombre = document.createElement('label');
   labelNombre.className = 'labelNombre';
-  labelNombre.innerHTML = `<span style="color: var(--ypn-color-primary);">■</span>Yolanda Pérez`;
+  labelNombre.innerHTML = `<span style="color: var(--ypn-color-primary); width: 30px;">■</span>Yolanda Pérez`;
 
   const labelPerfil = document.createElement('label');
   labelPerfil.className = 'labelPerfil';
