@@ -1,7 +1,7 @@
 button {
   height: 2rem;
   width: 8rem;
-  border-radius: var(--ypn-border-radius-l);
+  border-radius: var(--ypn-border-radius-xs);
   font-size: var(--ypn-font-size-s);
   font-weight: var(--ypn-font-weight-thin);
   border: none;

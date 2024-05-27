@@ -7,6 +7,7 @@
   text-align: center;
   background-color: var(--ypn-color-white);
   box-shadow: var(--ypn-shadow-xxl);
+  margin-bottom: var(--ypn-padding-margin-xl);
 }
 
 .izqArticle {

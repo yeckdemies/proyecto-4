@@ -1,5 +1,5 @@
-import { BigCard } from '../../components/BigCard/BigCard';
 import './curriculum.css';
+import { BigCard } from '../../components/BigCard/BigCard';
 
 const buildCurriculum = () => {
   const curriculum = document.createElement('div');
