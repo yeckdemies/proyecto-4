@@ -22,25 +22,51 @@
 
 .izqArticle p {
   font-size: var(--ypn-font-size-m);
-  height: 40px;
+  height: auto;
   margin: 0;
+  text-align: left;
+  margin-bottom: var(--ypn-padding-margin-m);
 }
 
 .dchArticle {
   display: flex;
   flex-direction: column;
   align-items: first baseline;
-  padding: var(--ypn-padding-margin-xl);
+  padding: var(--ypn-padding-margin-m) var(--ypn-padding-margin-l);
   height: 100%;
   width: 70%;
   box-sizing: border-box;
 }
 
-.dchArticle h2 {
-  margin: 0;
-  color: var(--ypn-color-primary);
+.dchArticle p {
+  font-size: var(--ypn-font-size-m);
+  text-align: left;
 }
 
-.fechas {
+.titulos {
   color: var(--ypn-color-primary);
+  font-weight: var(--ypn-font-weight-extrabold);
+  font-size: 1.3rem;
+}
+
+.izqPortafolio {
+  width: 50%;
+  border: none;
+}
+
+.izqPortafolio p {
+  text-align: justify;
+}
+
+.dchPortafolio {
+  width: 50%;
+  padding: 0;
+  padding: var(--ypn-padding-margin-xl) var(--ypn-padding-margin-m);
+}
+
+.dchPortafolio img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
 }

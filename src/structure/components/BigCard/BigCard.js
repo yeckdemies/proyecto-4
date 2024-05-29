@@ -1,14 +1,16 @@
 import './BigCard.css';
 
 const BigCard = ({
-  padre,
-  tipo = 'C',
-  fi = '',
-  ff = 'Actualidad',
-  rol = '',
-  empresa = '',
-  descripcion = '',
-  foto = ''
+  parent,
+  type = 'W', //W = Work, E = Education, P = Project
+  startDate = '',
+  endDate = '',
+  position = '',
+  company = '',
+  description = '',
+  title = '',
+  link = '',
+  preview = ''
 }) => {
   const sectionBigCard = document.createElement('section');
   sectionBigCard.className = 'sectionBigCard';
@@ -19,30 +21,58 @@ const BigCard = ({
   sectionBigCard.appendChild(izq);
 
   const fechas = document.createElement('h2');
-  fechas.className = 'fechas';
-  fechas.innerText = `${fi} - ${ff}`;
+  fechas.className = 'titulos';
+
+  if (type === 'W') {
+    if (endDate === '') {
+      endDate = 'Actualidad';
+    }
+    fechas.innerText = `${startDate} - ${endDate}`;
+  } else if (type === 'E') {
+    fechas.innerText = endDate;
+  }
 
   const puesto = document.createElement('p');
-  puesto.innerHTML = `<strong> ${rol} </strong>`;
+  puesto.innerHTML = `<strong> ${position} </strong>`;
 
   const nombreEmpresa = document.createElement('p');
-  nombreEmpresa.innerText = empresa;
-
-  izq.append(fechas, puesto, nombreEmpresa);
+  nombreEmpresa.innerText = company;
 
   /* Parte derecha */
   const dch = document.createElement('article');
   dch.className = 'dchArticle';
 
   const detalle = document.createElement('h2');
-  detalle.innerHTML = `<strong>Descripción</strong>`;
+  detalle.className = 'titulos';
 
-  const descripciónExtendida = document.createElement('p');
-  descripciónExtendida.innerText = descripcion;
+  const descripcionExtendida = document.createElement('p');
+  if (type === 'P') {
+    detalle.innerText = title;
+    descripcionExtendida.innerText = description;
+    izq.className = 'izqArticle izqPortafolio';
+    dch.className = 'dchArticle dchPortafolio';
 
-  dch.append(detalle, descripciónExtendida);
+    const image = document.createElement('img');
+    image.alt = 'Vista previa del proyecto';
+    image.src = preview;
+
+    const linkPreview = document.createElement('a');
+    linkPreview.href = link;
+    linkPreview.target = '_blank';
+
+    linkPreview.appendChild(image);
+
+    izq.append(detalle, puesto, descripcionExtendida);
+    dch.append(linkPreview);
+  } else {
+    detalle.innerText = 'Descripción';
+    descripcionExtendida.innerText = description.join('\n');
+    izq.append(fechas, puesto, nombreEmpresa);
+    dch.append(detalle, descripcionExtendida);
+  }
+
   sectionBigCard.appendChild(dch);
-  padre.append(sectionBigCard);
+  parent.appendChild(sectionBigCard);
 };
 
 export { BigCard };

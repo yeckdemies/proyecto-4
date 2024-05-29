@@ -18,9 +18,10 @@
 
 .form-container {
   background-color: #fff;
-  padding: var(--ypn-padding-margin-l);
-  border-radius: var(--ypn-border-radius-s);
+  padding: var(--ypn-padding-margin-xxl);
   box-shadow: var(--ypn-shadow-xl);
+  width: 50rem;
+  height: 25rem;
 }
 form {
   display: grid;
@@ -36,6 +37,7 @@ form .form-group label {
   font-weight: bold;
   margin-bottom: var(--ypn-padding-margin-s);
 }
+
 form .form-group input,
 form .form-group textarea {
   padding: var(--ypn-padding-margin-s);
@@ -43,6 +45,7 @@ form .form-group textarea {
   border-radius: var(--ypn-border-radius-xs);
   width: calc(100% - 16px);
 }
+
 form .form-group textarea {
   resize: vertical;
   width: 20rem;

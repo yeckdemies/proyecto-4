@@ -1,40 +1,169 @@
 const data = {
-  name: 'Yolanda Pérez',
+  name: 'Yolanda',
+  surname: 'Pérez',
   address: 'Armilla',
   email: 'yolandapnr@email.com',
   avatar:
-    'https://i.pinimg.com/736x/8f/c2/ad/8fc2adfb17b261162bbd9a4af5239c64.jpg',
-  aboutMe:
-    "I'm a passionate photographer, web developer, and journalist with a diverse educational background. I hold a Bachelor's degree in Science, a Web Development Certification, and a Master's in Journalism. My work experience includes capturing exclusive images as a photographer, developing web applications, and reporting on news stories. I'm committed to continuous learning and contributing to both the digital world and quality journalism.",
+    'https://res.cloudinary.com/dszffglcl/image/upload/v1716458026/Imagen_de_perfil_wklhk6.jpg',
+  aboutMe: `Tengo una gran capacidad para trabajar en equipo y coordinar tareas. Mi enfoque proactivo y mi afán de superación me han permitido adaptarme a diferentes entornos laborales y asumir nuevos desafíos con éxito. Soy respetuosa y me comprometo a brindar un excelente servicio, demostrando profesionalidad y empatía. Estoy constantemente buscando oportunidades para seguir aprendiendo y crecer profesionalmente, manteniéndome al día en las últimas tendencias y tecnologías en el ámbito de la informática y el desarrollo de software.`,
 
-  education: {
-    degree: 'Bachelor of Science in Computer Science',
-    university: 'City University of New York',
-    graduationYear: 2012,
-    honors: 'Summa Cum Laude',
-    relevantCourses: [
-      'Web Development Fundamentals',
-      'Data Structures and Algorithms',
-      'Database Design',
-      'User Interface Design'
-    ]
-  },
-  workExperience: [
+  education: [
     {
-      position: 'Web Developer',
-      company: 'Tech Solutions Inc.',
-      startDate: '2013',
-      endDate: 'Present',
-      description:
-        'As a key member of the development team, I have contributed to various projects, from creating interactive web applications to optimizing database performance.'
+      position: 'Full Stack Developer',
+      company: 'ThePower Tech School',
+      endDate: 2024,
+      description: [
+        'HTML5 y CSS3',
+        'JavaScript',
+        'TypeScript',
+        'Node.js',
+        'React',
+        'React Native',
+        'Next.js',
+        'Vite',
+        'Vue.js',
+        'Ionic',
+        'Flutter',
+        'Angular',
+        'SQL & NoSQL',
+        'Mongo DB',
+        'Figma'
+      ]
     },
     {
-      position: 'Freelance Web Developer',
-      company: 'Self-employed',
-      startDate: '2012',
-      endDate: '2013',
-      description:
-        'During my freelancing period, I collaborated with clients from diverse industries, delivering tailor-made websites that met their unique needs and goals.'
+      position: 'CFGS Desarrollo de Aplicaciones WEB',
+      company: 'IES AGUADULCE',
+      endDate: 2021,
+      description: [
+        'Sistemas informáticos',
+        'Bases de datos',
+        'Programación',
+        'Lenguajes de marcas y sistemas de gestión de información',
+        'Entornos de desarrollo',
+        'Desarrollo web en entorno cliente',
+        'Desarrollo web en entorno servidor',
+        'Despliegue de aplicaciones web',
+        'Diseño de interfaces WEB',
+        'Proyecto de desarrollo de aplicaciones web',
+        'Formación y orientación laboral',
+        'Empresa e iniciativa emprendedora',
+        'Formación en centros de trabajo'
+      ]
+    },
+    {
+      position: 'CFGS Desarrollo de Aplicaciones Informáticas',
+      company: 'IES ZAIDIN-VERGELES',
+      endDate: 2007,
+      description: [
+        'Sistemas informáticos multiusuario y en red',
+        'Análisis y diseño detallado de aplicaciones informáticas de gestión',
+        'Programación en lenguajes estructurados',
+        'Desarrollo de aplicaciones en entornos de cuarta generación y con herramientas CASE',
+        'Diseño y realización de servicios de presentación en entornos gráficos',
+        'Relaciones en el Entorno de Trabajo',
+        'Formación y Orientación Laboral',
+        'La Informática: su Utilización en las Empresas de Andalucía',
+        'Proyecto de desarrollo de aplicaciones informáticas',
+        'Formación en centros de trabajo'
+      ]
+    }
+  ],
+  workExperience: [
+    {
+      position: 'Administración de Sistemas Informáticos | Desarrollo',
+      company: 'Ayuntamiento de Armilla',
+      startDate: '12/2023',
+      endDate: '',
+      location: 'Armilla (Granada)',
+      description: [
+        'Formación en IT',
+        'Desarrollo web',
+        'Digitalización',
+        'Helpdesk'
+      ]
+    },
+    {
+      position:
+        'Desarrollo | Consultora funcional ERP | Coordinación de equipos | Testing | Helpdesk',
+      company: 'Covirán Soluciones Tecnológicas',
+      startDate: '08/2008',
+      endDate: '12/2023',
+      location: 'Atarfe (Granada)',
+      description: [
+        'Evaluación de los procesos existentes y definición de mejoras para adaptar el software a las necesidades de nuestros clientes',
+        'Creación y Mantenimiento de Servidores IIS para sincronización de datos',
+        'Realización de test y pruebas funcionales',
+        'Configuración y personalización del software para adaptarlo a las necesidades específicas de cada cliente',
+        'Entrenamiento y formación a técnicos y usuarios finales en el uso del software',
+        'Coordinación de migraciones, implementación y despliegue del software en nuestros clientes',
+        'Mantenimiento y soporte avanzado post-implementación a técnicos y usuarios finales',
+        'Coordinación, revisión y creación de manuales, guías y documentación técnica para el uso y mantenimiento del software'
+      ]
+    },
+    {
+      position: 'Helpdesk',
+      company: 'Attempora ETT, SL',
+      startDate: '05/2008',
+      endDate: '08/2008',
+      location: 'Atarfe (Granada)',
+      description: [
+        'Soporte informático telefónico y de campo',
+        'Formación a clientes finales en software de gestión comercial',
+        'Mantenimiento e implantación de hardware y software'
+      ]
+    },
+    {
+      position: 'Desarrollo',
+      company: 'Técnica Taine',
+      startDate: '02/2008',
+      endDate: '05/2008',
+      location: 'Ogíjares (Granada)',
+      description: [
+        'Migración de datos de aplicación de gestión comercial a ERP',
+        'Desarrollo de informes específicos',
+        'Soporte funcional y técnico',
+        'Mantenimiento informático',
+        'Desarrollo web'
+      ]
+    },
+    {
+      position: 'Helpdesk | Desarrollo',
+      company: 'RGB Consultores',
+      startDate: '09/2007',
+      endDate: '05/2008',
+      location: 'Granada',
+      description: [
+        'Mantenimiento informático',
+        'Soporte informático remoto e in situ',
+        'Desarrollo web: Javascript, PHP',
+        'Formación informática a usuario final'
+      ]
+    },
+    {
+      position: 'Programadora Junior',
+      company: 'Intecna Soluciones Integrales',
+      startDate: '04/2007',
+      endDate: '08/2007',
+      location: 'Granada',
+      description: [
+        'Portal del ciudadano de la Diputación de Granada: JSP',
+        'Diputación de Cádiz: ASP, PHP y JavaScript',
+        'HTML y CSS',
+        'OpenCS'
+      ]
+    },
+    {
+      position: 'Administración de Sistemas Informáticos | Helpdesk',
+      company: 'Europroma Soft',
+      startDate: '06/2007',
+      endDate: '06/2007',
+      location: 'Motril (Granada)',
+      description: [
+        'Implantación de software: AM System, A3 Asesor',
+        'Formación en microinformática y tecnologías implantadas',
+        'Soporte técnico y formación',
+        'Administración de sistemas y mantenimiento informático'
+      ]
     }
   ],
   skills: [
@@ -51,28 +180,20 @@ const data = {
   ],
   projects: [
     {
-      title: 'E-commerce Website',
+      title: 'Réplica Starbucks',
       description:
-        'Designed and developed a feature-rich e-commerce platform with advanced product search, user reviews, and a secure payment system, resulting in a 30% increase in sales for the client.',
-      link: 'http://github.com/#',
+        'Esta práctica consistió en crear una página web inspirada en el sitio de Starbucks. El proyecto se centró en el diseño y la estructura de la página, buscando capturar la estética y la funcionalidad del sitio oficial de Starbucks. Incluye secciones informativas, un menú de productos y elementos interactivos para mejorar la experiencia del usuario.',
+      link: 'https://proyecto2-replica-starbucks.vercel.app',
       preview:
-        'https://plus.unsplash.com/premium_photo-1684785618727-378a3a5e91c5?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZWNvbW1lcmNlfGVufDB8fDB8fHww&w=500'
+        'https://res.cloudinary.com/dszffglcl/image/upload/v1716920770/ReplicaStarbucks_v1plm9.png'
     },
     {
-      title: 'Blog Platform',
+      title: 'Réplica Pinterest',
       description:
-        'Created a customizable blog platform with dynamic content creation, user authentication, comment functionality, and social media integration, leading to a 50% growth in user engagement.',
-      link: 'http://github.com/#',
+        'En esta práctica, he desarrollado una réplica de la página de búsqueda de Pinterest. El objetivo era recrear la interfaz de usuario y la experiencia de navegación de Pinterest, enfocándome en el diseño responsivo y la funcionalidad de búsqueda. Utilicé HTML, CSS y JavaScript para lograr un diseño visualmente atractivo y una experiencia de usuario fluida, similar a la plataforma original.',
+      link: 'https://proyecto-3-replica-pinterest.vercel.app',
       preview:
-        'https://plus.unsplash.com/premium_photo-1684581214880-2043e5bc8b8b?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2070'
-    },
-    {
-      title: 'Portfolio Website',
-      description:
-        'Built a professional portfolio website to showcase my web development skills and projects. The site features a clean, responsive design and highlights my work as a developer.',
-      link: 'http://github.com/#',
-      preview:
-        'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2071'
+        'https://res.cloudinary.com/dszffglcl/image/upload/v1716920770/ReplicaPinterest_gnjj9u.png'
     }
   ]
 };

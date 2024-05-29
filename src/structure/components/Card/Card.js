@@ -1,4 +1,5 @@
 import './Card.css';
+import data from '../../../utils/data';
 
 const Card = ({ padre }) => {
   const sectionCard = document.createElement('section');
@@ -6,13 +7,12 @@ const Card = ({ padre }) => {
 
   const imgPerfil = document.createElement('img');
   imgPerfil.alt = 'Imagen de perfil de Yolanda Pérez';
-  imgPerfil.src =
-    'https://res.cloudinary.com/dszffglcl/image/upload/v1716458026/Imagen_de_perfil_wklhk6.jpg';
+  imgPerfil.src = data.avatar;
   imgPerfil.className = 'imgPerfil';
   imgPerfil.id = 'imgPerfil';
 
   const nombre = document.createElement('h2');
-  nombre.innerHTML = 'Yolanda <br /> Pérez';
+  nombre.innerHTML = `${data.name} <br /> ${data.surname}`;
 
   const linea = document.createElement('hr');
   linea.className = 'custom-hr';

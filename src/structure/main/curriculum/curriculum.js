@@ -1,5 +1,6 @@
 import './curriculum.css';
 import { BigCard } from '../../components/BigCard/BigCard';
+import data from '../../../utils/data';
 
 const buildCurriculum = () => {
   const curriculum = document.createElement('div');
@@ -14,18 +15,20 @@ const buildCurriculum = () => {
   const experiencia = document.createElement('h2');
   experiencia.className = 'experiencia';
   experiencia.innerHTML = `Experiencia`;
-
   curriculum.append(experiencia);
 
-  BigCard({
-    padre: curriculum,
-    tipo: 'C',
-    fi: '2024',
-    rol: 'Consultora Analista CRM',
-    empresa: 'Greening Group SL',
-    ubicacion: 'Granada',
-    descripcion: 'Análisis, diseño, implementación, helpdesk'
-  });
+  for (const job of data.workExperience) {
+    BigCard({
+      parent: curriculum,
+      type: 'W',
+      startDate: job.startDate,
+      endDate: job.endDate,
+      position: job.position,
+      company: job.company,
+      location: job.location,
+      description: job.description
+    });
+  }
 
   const educacion = document.createElement('h2');
   educacion.className = 'educacion';
@@ -33,15 +36,17 @@ const buildCurriculum = () => {
 
   curriculum.append(educacion);
 
-  BigCard({
-    padre: curriculum,
-    tipo: 'C',
-    fi: '2020',
-    rol: 'CFGS DESARROLLO DE APLICACIONES WEB',
-    empresa: 'IES Aguadulce',
-    ubicacion: 'Almería',
-    descripcion: 'Ciclo formativo de grado superior orientado laskdjfañskjdf'
-  });
+  for (const education of data.education) {
+    BigCard({
+      parent: curriculum,
+      type: 'E',
+      endDate: education.endDate,
+      position: education.position,
+      company: education.company,
+      location: education.location,
+      description: education.description
+    });
+  }
 
   const main = document.querySelector('main');
   main.append(curriculum);

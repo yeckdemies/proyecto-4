@@ -1,6 +1,7 @@
 import './pagePrincipal.css';
 import { Button } from '../../components/Button/Button';
 import { Card } from '../../components/Card/Card';
+import data from '../../../utils/data';
 
 const buildPagePrincipal = () => {
   const pagePrincipal = document.createElement('div');
@@ -22,10 +23,10 @@ const buildPagePrincipal = () => {
   presentation.className = 'presentation';
 
   const title = document.createElement('h2');
-  title.innerText = 'Hola!';
+  title.innerText = 'Sobre Mí';
 
   const subtitle = document.createElement('h3');
-  subtitle.innerText = 'Estoy es lo que soy y lo que hago';
+  subtitle.innerText = 'Apasionada de la programación en constante cremiento.';
 
   const contentButtons = document.createElement('div');
   contentButtons.className = 'contentButtons';
@@ -46,15 +47,10 @@ const buildPagePrincipal = () => {
   const contentP = document.createElement('div');
   contentP.className = 'contentP';
   const p1 = document.createElement('p');
-  const p2 = document.createElement('p');
 
-  p1.innerText =
-    'Párrafo. Haz clic aquí para agregar tu propio texto y editar. Es fácil. Haz clic en "Editar texto" o doble clic aquí para agregar tu contenido y cambiar la fuente.';
+  p1.innerText = data.aboutMe;
 
-  p2.innerText =
-    'Aquí puedes contar tu historia y permitir que tus usuarios sepan más sobre ti.';
-
-  contentP.append(p1, p2);
+  contentP.appendChild(p1);
 
   presentation.append(title, subtitle, contentButtons, contentP);
 

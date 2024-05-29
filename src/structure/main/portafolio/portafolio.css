@@ -15,10 +15,10 @@
   font-size: var(--ypn-font-size-xxl);
 }
 
-.descripción {
+.descripcion {
+  width: 50rem;
   color: var(--ypn-color-white);
   font-weight: var(--ypn-font-weight-extraThin);
-  letter-spacing: var(--ypn-letter-spacing-s);
-  font-size: var(--ypn-font-size-s);
-  width: 50rem;
+  font-size: var(--ypn-font-size-m);
+  text-align: center;
 }
