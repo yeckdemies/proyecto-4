@@ -7,17 +7,18 @@ import { buildPortafolio } from './src/structure/main/portafolio/portafolio';
 import { buildContacto } from './src/structure/main/contacto/contacto';
 
 buildHeader();
+
 const main = document.createElement('main');
 document.getElementById('app').append(main);
 
-buildPagePrincipal();
-
 const links = [
-  { element: document.querySelector('#inicio'), build: buildPagePrincipal },
-  { element: document.querySelector('#sobreMi'), build: buildPagePrincipal },
-  { element: document.querySelector('#curriculum'), build: buildCurriculum },
-  { element: document.querySelector('#portafolio'), build: buildPortafolio },
-  { element: document.querySelector('#contacto'), build: buildContacto }
+  { selector: '#inicio', build: buildPagePrincipal },
+  { selector: '#sobreMi', build: buildPagePrincipal },
+  { selector: '#curriculum', build: buildCurriculum },
+  { selector: '#portafolio', build: buildPortafolio },
+  { selector: '#contacto', build: buildContacto },
+  { selector: '#buttonCurriculum', build: buildCurriculum },
+  { selector: '#buttonProyectos', build: buildPortafolio }
 ];
 
 const handleNavigation = (event, buildFunction) => {
@@ -30,6 +31,7 @@ const handleNavigation = (event, buildFunction) => {
       main.classList.add('fade-enter');
       main.innerHTML = '';
       buildFunction();
+      addEventListeners();
       requestAnimationFrame(() => {
         main.classList.add('fade-enter-active');
         main.classList.remove('fade-enter');
@@ -39,9 +41,25 @@ const handleNavigation = (event, buildFunction) => {
   );
 };
 
-links.forEach(({ element, build }) => {
-  element.addEventListener('click', (event) => handleNavigation(event, build));
-});
+const addEventListeners = () => {
+  links.forEach(({ selector, build }) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.addEventListener('click', (event) =>
+        handleNavigation(event, build)
+      );
+    } else {
+      console.warn(`Elemento no encontrado: ${selector}`);
+    }
+  });
 
-const imgPerfil = document.querySelector('#imgPerfil');
-imgPerfil.addEventListener('click', () => startTransformImg(imgPerfil));
+  const imgPerfil = document.querySelector('#imgPerfil');
+  if (imgPerfil) {
+    imgPerfil.addEventListener('click', () => startTransformImg(imgPerfil));
+  } else {
+    console.warn('Elemento no encontrado: #imgPerfil');
+  }
+};
+
+buildPagePrincipal();
+addEventListeners();

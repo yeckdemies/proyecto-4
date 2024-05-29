@@ -41,7 +41,7 @@ const buildPagePrincipal = () => {
     padre: contentButtons,
     texto: 'PROYECTOS',
     clase: 'buttonBlanco',
-    id: 'buttonCurriculum'
+    id: 'buttonProyectos'
   });
 
   const contentP = document.createElement('div');
