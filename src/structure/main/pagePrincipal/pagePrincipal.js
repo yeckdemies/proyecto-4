@@ -37,6 +37,7 @@ const buildPagePrincipal = () => {
     clase: 'buttonAzul',
     id: 'buttonCurriculum'
   });
+  
   Button({
     padre: contentButtons,
     texto: 'PROYECTOS',
