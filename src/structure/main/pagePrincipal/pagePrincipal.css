@@ -70,3 +70,25 @@ p {
 .presentation > h2 {
   font-size: var(--ypn-font-size-xl);
 }
+
+@media (max-width: 900px) {
+  .pagePrincipal {
+    height: 100%;
+  }
+  .content {
+    flex-direction: column;
+    width: 40vh;
+    height: 100%;
+  }
+  .sectionCard {
+    height: 30rem;
+  }
+
+  .left {
+    height: 100%;
+  }
+
+  .right {
+    height: 100%;
+  }
+}

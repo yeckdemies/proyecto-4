@@ -22,3 +22,21 @@
   font-size: var(--ypn-font-size-m);
   text-align: center;
 }
+
+@media (max-width: 569px) {
+  .descripcion {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 680px) and (min-width: 568px) {
+  .descripcion {
+    width: 35rem;
+  }
+}
+
+@media (max-width: 834px) and (min-width: 679px) {
+  .descripcion {
+    width: 40rem;
+  }
+}

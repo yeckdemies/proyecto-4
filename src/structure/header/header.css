@@ -46,3 +46,31 @@ header > a {
   color: var(--ypn-color-text);
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: var(--ypn-padding-margin-m);
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    padding: var(--ypn-padding-margin-m);
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    display: flex;
+    align-items: left;
+    padding: var(--ypn-padding-margin-m);
+  }
+}

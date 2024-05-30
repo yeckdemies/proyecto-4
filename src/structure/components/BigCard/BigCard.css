@@ -70,3 +70,40 @@
   display: block;
   margin: auto;
 }
+
+@media (max-width: 550px) {
+  .sectionBigCard {
+    flex-direction: column;
+    width: 25rem;
+    height: auto;
+  }
+  .izqArticle {
+    width: 100%;
+  }
+  .dchArticle {
+    width: 100%;
+    padding: var(--ypn-padding-margin-m);
+  }
+}
+
+@media (max-width: 690px) and (min-width: 551px) {
+  .sectionBigCard {
+    flex-direction: column;
+    width: 30rem;
+    height: auto;
+  }
+  .izqArticle {
+    border: none;
+    width: 100%;
+  }
+  .dchArticle {
+    width: 100%;
+    padding: var(--ypn-padding-margin-m);
+  }
+}
+
+@media (max-width: 900px) and (min-width: 691px) {
+  .sectionBigCard {
+    width: 40rem;
+  }
+}

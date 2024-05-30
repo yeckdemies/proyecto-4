@@ -6,11 +6,11 @@ const buildHeader = () => {
   const inicio = document.createElement('a');
   inicio.id = 'inicio';
 
-  const labelNombre = document.createElement('label');
+  const labelNombre = document.createElement('span');
   labelNombre.className = 'labelNombre';
   labelNombre.innerHTML = `<span style="color: var(--ypn-color-primary); width: 30px;">■</span>Yolanda Pérez`;
 
-  const labelPerfil = document.createElement('label');
+  const labelPerfil = document.createElement('span');
   labelPerfil.className = 'labelPerfil';
   labelPerfil.innerText =
     'Consultora Analista CRM | Consultora Funcional ERP | Coordinación de equipos | Testing | Helpdesk';

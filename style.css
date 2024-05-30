@@ -84,13 +84,17 @@
   box-sizing: border-box;
 }
 
+html {
+  min-width: 450px;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: var(--ypn-font-family-base);
 }
 
-/* transition change pages */
+/* transition */
 
 .fade-enter {
   opacity: 0;

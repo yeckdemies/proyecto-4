@@ -31,7 +31,6 @@ const handleNavigation = (event, buildFunction) => {
       main.classList.add('fade-enter');
       main.innerHTML = '';
       buildFunction();
-      addEventListeners();
       requestAnimationFrame(() => {
         main.classList.add('fade-enter-active');
         main.classList.remove('fade-enter');
@@ -41,25 +40,16 @@ const handleNavigation = (event, buildFunction) => {
   );
 };
 
-const addEventListeners = () => {
+document.addEventListener('click', (event) => {
   links.forEach(({ selector, build }) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      element.addEventListener('click', (event) =>
-        handleNavigation(event, build)
-      );
-    } else {
-      console.warn(`Elemento no encontrado: ${selector}`);
+    if (event.target.matches(selector)) {
+      handleNavigation(event, build);
     }
   });
 
-  const imgPerfil = document.querySelector('#imgPerfil');
-  if (imgPerfil) {
-    imgPerfil.addEventListener('click', () => startTransformImg(imgPerfil));
-  } else {
-    console.warn('Elemento no encontrado: #imgPerfil');
+  if (event.target.matches('#imgPerfil')) {
+    startTransformImg(event.target);
   }
-};
+});
 
 buildPagePrincipal();
-addEventListeners();
