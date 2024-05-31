@@ -3,14 +3,14 @@ import './header.css';
 const buildHeader = () => {
   const header = document.createElement('header');
 
-  const inicio = document.createElement('a');
+  const inicio = document.createElement('div');
   inicio.id = 'inicio';
 
-  const labelNombre = document.createElement('span');
+  const labelNombre = document.createElement('label');
   labelNombre.className = 'labelNombre';
   labelNombre.innerHTML = `<span style="color: var(--ypn-color-primary); width: 30px;">■</span>Yolanda Pérez`;
 
-  const labelPerfil = document.createElement('span');
+  const labelPerfil = document.createElement('label');
   labelPerfil.className = 'labelPerfil';
   labelPerfil.innerText =
     'Consultora Analista CRM | Consultora Funcional ERP | Coordinación de equipos | Testing | Helpdesk';

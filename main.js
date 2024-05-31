@@ -12,7 +12,6 @@ const main = document.createElement('main');
 document.getElementById('app').append(main);
 
 const links = [
-  { selector: '#inicio', build: buildPagePrincipal },
   { selector: '#sobreMi', build: buildPagePrincipal },
   { selector: '#curriculum', build: buildCurriculum },
   { selector: '#portafolio', build: buildPortafolio },
@@ -36,7 +35,7 @@ const handleNavigation = (event, buildFunction) => {
         main.classList.remove('fade-enter');
       });
     },
-    { once: true }
+    { once: true } //indicamos que solo se va a escuchar una vez
   );
 };
 
